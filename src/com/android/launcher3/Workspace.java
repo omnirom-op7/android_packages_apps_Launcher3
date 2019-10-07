@@ -290,7 +290,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                 new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent event) {
-                OmniUtils.goToSleep(context);
+                if (Utilities.useSleepGesture(context)) {
+                    OmniUtils.goToSleep(context);
+                }
                 return true;
             }
 

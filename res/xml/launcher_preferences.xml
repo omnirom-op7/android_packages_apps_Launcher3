@@ -133,4 +133,17 @@
             android:summary="%s"
             android:title="@string/number_of_hotseat_title"/>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gestures_category"
+        android:title="@string/gestures_category_title">
+
+        <SwitchPreference
+            android:key="pref_sleep_gesture"
+            android:title="@string/pref_sleep_gesture_title"
+            android:summary="@string/pref_sleep_gesture_summary"
+            android:defaultValue="true"
+            android:persistent="true"/>
+
+    </PreferenceCategory>
 </PreferenceScreen>

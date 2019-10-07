@@ -237,6 +237,14 @@ public class SettingsActivity extends Activity {
                     return true;
                 }
             });
+
+            SwitchPreference sleepGesture = (SwitchPreference) findPreference(Utilities.SLEEP_GESTURE);
+            sleepGesture.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    mRestartNeeded = true;
+                    return true;
+                }
+            });
         }
 
         @Override
